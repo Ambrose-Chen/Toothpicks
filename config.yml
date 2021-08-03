@@ -1,0 +1,33 @@
+
+python_env: 'python3'
+
+mail:
+  # These are the settings for sending emails for monitoring alerts
+  #
+  #   smtp_addr:   
+  #   user:       
+  #   pass:       
+  #
+  #   sender:     
+  #   receivers:  
+  #
+  
+
+# These are the settings for scanning host ports on a regular basis
+scan_hosts:
+  - 0.0.0.0/0
+scan_ports:
+  - 8447
+
+scan_interval: 10
+
+# This is the settings for the process timeout, date format is `%H:%M:%S`
+process_timeout: '16:00:00'
+
+process_interval: 3600
+
+# ansible_inventory: Ansible represents what machines it manages using a very simple INI file that puts all of your managed machines in groups of your own choosing
+ansible_inventory: '/etc/ansible/hosts'
+
+# level: 'NOTSET',' DEBUG', 'INFO', 'WARNING', 'ERROR'
+log_level: 'INFO'
